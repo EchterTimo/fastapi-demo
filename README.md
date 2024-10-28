@@ -1,2 +1,2 @@
 # flask-demo
-A simple flask app to test on a Raspberry Pi
+A simple fastapi app to test on a Raspberry Pi
