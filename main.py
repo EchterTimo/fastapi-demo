@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 
 app = FastAPI()
 
@@ -6,6 +6,7 @@ app = FastAPI()
 @app.get("/")
 async def root():
     return {"message": "it works"}
+
 
 @app.get("/ip")
 async def get_client_ip(request: Request):
