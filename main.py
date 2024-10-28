@@ -1,16 +1,8 @@
-from flask import Flask
+from fastapi import FastAPI
 
-app = Flask(__name__)
-
-
-@app.route('/')
-def root():
-    return "it works"
+app = FastAPI()
 
 
-@app.route('/json')
-def json_endpoint():
-    return {
-        "code": 200,
-        "message": "it works"
-    }
+@app.get("/")
+async def root():
+    return {"message": "it works"}
